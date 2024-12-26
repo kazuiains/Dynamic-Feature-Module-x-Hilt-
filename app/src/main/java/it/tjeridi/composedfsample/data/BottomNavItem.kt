@@ -1,7 +1,7 @@
 package it.tjeridi.composedfsample.data
 
-enum class BottomNavItem(var route:String) {
-    DfFirst(Screens.DFFirst.route),
-    DfSecond(Screens.DFSecond.route),
-    DfThird(Screens.DFThird.route)
+enum class BottomNavItem(var route: String) {
+    FirstScreen(Screens.FirstScreen.route),
+    SecondScreen(Screens.SecondScreen.route),
+    ThirdScreen(Screens.ThirdScreen.route)
 }

@@ -13,6 +13,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
+import androidx.hilt.navigation.compose.hiltViewModel
 
 /*
  * this class is used by reflection
@@ -21,7 +22,8 @@ import androidx.compose.ui.unit.dp
 
 @Suppress("unused")
 @Composable
-fun DFSecondScreen(paddingValues: PaddingValues){
+fun DFSecondScreen(paddingValues: PaddingValues) {
+    val viewModel: DFSecondViewModel = hiltViewModel()
     Column(
         modifier = Modifier
             .background(Color.Blue)
@@ -32,7 +34,7 @@ fun DFSecondScreen(paddingValues: PaddingValues){
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         Text(
-            text = "df second screen",
+            text = viewModel.text,
             color = Color.White,
             modifier = Modifier.padding(all = 20.dp)
         )

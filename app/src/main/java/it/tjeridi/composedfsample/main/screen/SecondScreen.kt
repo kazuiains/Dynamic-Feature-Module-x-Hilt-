@@ -1,9 +1,7 @@
-package it.tjeridi.df_third
+package it.tjeridi.composedfsample.main.screen
 
-import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
@@ -11,31 +9,21 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
-import androidx.hilt.navigation.compose.hiltViewModel
-
-/*
- * this class is used by reflection
- */
-
+import androidx.navigation.NavHostController
 
 @Suppress("unused")
 @Composable
-fun DFThirdScreen(paddingValues: PaddingValues) {
-    val viewModel: DFThirdViewModel = hiltViewModel()
+fun SecondScreen(navController: NavHostController) {
     Column(
         modifier = Modifier
-            .background(Color.Magenta)
             .fillMaxWidth()
-            .fillMaxHeight()
-            .padding(paddingValues),
+            .fillMaxHeight(),
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         Text(
-            text = viewModel.text,
-            color = Color.White,
+            text = "Menu Ke-2",
             modifier = Modifier.padding(all = 20.dp)
         )
     }

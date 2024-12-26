@@ -16,6 +16,6 @@ import it.tjeridi.composedfsample.widget.DFNavHost
 fun MainContent() {
     val navController = rememberNavController()
     Scaffold(bottomBar = { DFBottomNavBar(navController) }) {
-        DFNavHost(navController, BottomNavItem.DfFirst.route,it)
+        DFNavHost(navController, BottomNavItem.FirstScreen.route,it)
     }
 }

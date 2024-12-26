@@ -13,6 +13,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
+import androidx.lifecycle.viewmodel.compose.viewModel
 
 /*
  * this class is used by reflection
@@ -21,7 +22,8 @@ import androidx.compose.ui.unit.dp
 
 @Suppress("unused")
 @Composable
-fun DFFirstScreen(paddingValues:PaddingValues){
+fun DFFirstScreen(paddingValues: PaddingValues) {
+    val viewModel: DFFirstViewModel = viewModel()
     Column(
         modifier = Modifier
             .background(Color.DarkGray)
@@ -32,7 +34,7 @@ fun DFFirstScreen(paddingValues:PaddingValues){
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         Text(
-            text = "df first screen",
+            text = viewModel.text,
             color = Color.White,
             modifier = Modifier.padding(all = 20.dp)
         )

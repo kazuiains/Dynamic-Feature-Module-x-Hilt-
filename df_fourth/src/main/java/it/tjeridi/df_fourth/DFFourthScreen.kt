@@ -1,9 +1,8 @@
-package it.tjeridi.df_third
+package it.tjeridi.df_fourth
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
@@ -22,14 +21,13 @@ import androidx.hilt.navigation.compose.hiltViewModel
 
 @Suppress("unused")
 @Composable
-fun DFThirdScreen(paddingValues: PaddingValues) {
-    val viewModel: DFThirdViewModel = hiltViewModel()
+fun DFFourthScreen() {
+    val viewModel: DFFourthViewModel = hiltViewModel()
     Column(
         modifier = Modifier
-            .background(Color.Magenta)
+            .background(Color.DarkGray)
             .fillMaxWidth()
-            .fillMaxHeight()
-            .padding(paddingValues),
+            .fillMaxHeight(),
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {

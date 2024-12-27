@@ -1,5 +1,6 @@
 package it.tjeridi.df_third
 
+import android.util.Log
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -12,8 +13,9 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
-import androidx.hilt.navigation.compose.hiltViewModel
+import it.tjeridi.df_third.di.inject
 
 /*
  * this class is used by reflection
@@ -23,7 +25,13 @@ import androidx.hilt.navigation.compose.hiltViewModel
 @Suppress("unused")
 @Composable
 fun DFThirdScreen(paddingValues: PaddingValues) {
-    val viewModel: DFThirdViewModel = hiltViewModel()
+    val component = inject(LocalContext.current)
+
+    val viewModel: DFThirdViewModel = daggerViewModel {
+        Log.i("COMPNAVILOG", "create VM: Screen1ViewModel")
+        component.getViewModel()
+    }
+
     Column(
         modifier = Modifier
             .background(Color.Magenta)
